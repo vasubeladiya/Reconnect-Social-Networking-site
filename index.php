@@ -21,13 +21,6 @@ if(isset($_SESSION['Auth']) && $user['ac_status']==0 && !$pagecount){
     showPage('navbar');
     showPage('wall');
 }
-// }elseif(isset($_SESSION['Auth']) && $user['ac_status']==0 && !$pagecount){
-
-//     showPage('header',['page_title'=>'Verify Your Email']);
-//     showPage('verify_email');
-// }elseif(isset($_SESSION['Auth']) && $user['ac_status']==2 && !$pagecount){
-//     showPage('header',['page_title'=>'Blocked']);
-//     showPage('blocked');
 elseif(isset($_SESSION['Auth']) && isset($_GET['editprofile']) && $user['ac_status']==0){
     showPage('header',['page_title'=>'Edit Profile']);
     showPage('navbar');
@@ -71,10 +64,6 @@ elseif(isset($_SESSION['Auth']) && isset($_GET['editprofile']) && $user['ac_stat
         showPage('header',['page_title'=>'Verify Your Email']);
         showPage('verify_email');
     }
-    // elseif(isset($_SESSION['Auth']) && $user['ac_status']==2){
-    //     showPage('header',['page_title'=>'Blocked']);
-    //     showPage('blocked');
-    // }
     else{
         showPage('header',['page_title'=>'Pictogram - Login']);
         showPage('login');
